@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Rowdies&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+    <link rel="icon" href="./assest/icons/galaxia.png">
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/transitions.css">
+    <title>Steven Rodríguez</title>
+</head>
+<body>
+    <div class="transition transition-3 is-active"></div>
+    <main>
+        <section class="main-container">
+        <div class="contenedor-menu" id="contenedor-menu">
+            <p class="btn-abrir-menu" id="btn-abrir-menu">       
+            </p>
+            <nav class="elementos-navegacion">
+                <img class="nav-image" src="./assest/icons/ovni.png" alt="">
+                <ul>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./acerca-de-mi.html">Acerca de mi</a></li>
+                    <li><a href="./proyectos.html">Proyectos</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <section class="main-form">
+        <div class="box">
+            <form action="https://formsubmit.co/jsrodriguez049@gmail.com" method="POST">
+
+                <h2>Envíame un mensaje</h2>
+                <h3>¿Tienes una pregunta o propuesta, o solo quieres saludar? Adelante.</h3>
+                <div class="input-box email">
+                    <span>Nombre</span>
+                    <input class="input-email" type="text" name="nombre"
+                    placeholder="Escribe tu nombre" required>
+                    
+                </div>
+
+                <div class="input-box email">
+                    <span>Correo</span>
+                    <input class="input-email" type="email" name="email"
+                    placeholder="Escribe tu correo"  required>
+                    
+                </div>
+                <div class="input-box mensaje">
+                    <span>Mensaje</span>
+                    <textarea cols="30" rows="10"  name="mensaje" required placeholder="Hola, Steven, nos interesó tus diseños ¿Qué tan pronto podemos hablar?"></textarea>
+                </div>
+
+                <input class="input-enviar" type="submit" value="Enviar">
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_next" value="https://raicox.github.io/steven-portafolio/agradecimientos.html">
+
+                
+
+            </form>
+        </div>
+        <img  class="image-galaxia" src="./assest/universo/galaxia-right.png" alt="imagen de galaxia">
+
+        <img  class="image-galaxia-2" src="./assest/universo/galaxia-left.png" alt="imagen de galaxia">
+
+        <div class="astronauta-cayendo">
+            <img src="./assest/astronautas/astronauta-cayendo.png" alt="astronauta">
+        </div>
+
+        
+    </section>
+    </main>
+    <script src="./js/index.js"></script>
+</body>
+</html>

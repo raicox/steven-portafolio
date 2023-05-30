@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    background-image: url(../assest/universo/fondo-contacto.jpg);
+}
+
+#particles-js {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    background-color: black;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.contenedor-menu {
+    
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    top: 0;
+    right: 0;
+    clip-path: circle(100px at 100% 0);
+    transition: .7s ease all;
+    cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.active {
+    clip-path: circle(500px at 100% 0);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.39539565826330536) 0%, rgba(0,0,0,0.4374124649859944) 29%, rgba(32,38,204,0.3085609243697479) 52%, rgba(49,74,209,0.3169642857142857) 70%, rgba(23,137,173,0.3897934173669467) 91%);
+    backdrop-filter: blur(20px);
+}
+
+.elementos-navegacion {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.elementos-navegacion img {
+    position: fixed;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 40px;
+    right: 0;
+    transition: .3s ease;
+}
+
+.inactive {
+    display: none;
+}
+
+.elementos-navegacion ul {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.elementos-navegacion li {
+    list-style: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.elementos-navegacion li a {
+    text-decoration: none;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: .2s ease all;
+}
+
+.elementos-navegacion li a:hover {
+    background-color: black;
+}
+
+.box {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    background: #1c1c1c;
+    border-radius: 50px 5px;
+    overflow: hidden;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg, transparent, #45f3ff,#45f3ff);
+    transform-origin:bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg, transparent, #d9138a,#d9138a);
+    transform-origin:bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 50px 5px;
+    background: #28292d;
+    z-index: 10;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+h3 {
+    color: #8f8b8b;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Bruno Ace SC', cursive;
+    margin-top: 10px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.input-box input {
+    width: 100%;
+    height: 35px;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-family: 'Rowdies', cursive;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+
+.input-box textarea {
+    width: 100%;
+    height: 60px;
+    padding: 5px;
+    font-size: 1.5rem;
+    resize: none;
+    font-family: 'Rowdies', cursive;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.input-box span {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.input-enviar {
+    width: 30%;
+    margin: 50px auto;
+}
+
+input[type="submit"] {
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    padding: 5px;
+    border-radius: 90px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+input[type="submit"]:active {
+    background: linear-gradient(90deg, #45f3ff,#d9138a);
+    opacity: 0.8;
+}
+
+.image-galaxia {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.image-galaxia-2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+}
+
+.astronauta-cayendo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    position: absolute;
+    left: 15%;
+    bottom: 55%;
+}
+
+
+.astronauta-cayendo img {
+    width: 1px;
+    animation: fall 12s ease;
+}
+
+@keyframes fall {
+    0% {
+        transform: scale(500);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+    
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1350px) {
+    .astronauta-cayendo img {
+        width: 1px;
+        animation: fall 12s ease;
+    }
+    
+    @keyframes fall {
+        0% {
+            transform: scale(300);
+        }
+    
+        50% {
+            transform: rotate(90deg);
+        }
+        
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .astronauta-cayendo {
+        left: 10%;
+    }
+    
+    .astronauta-cayendo img {
+        width: 1px;
+        animation: fall 12s ease;
+    }
+    
+    @keyframes fall {
+        0% {
+            transform: scale(200);
+        }
+    
+        50% {
+            transform: rotate(90deg);
+        }
+        
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+@media (max-width: 860px) {
+    .astronauta-cayendo {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 540px) {
+    .box {
+        width: 400px;
+        height: 650px
+    }
+
+    .elementos-navegacion li a{
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .box {
+        width: 310px;
+        height: 650px
+    }
+
+    .elementos-navegacion li a{
+        font-size: 2rem;
+    } 
+
+    .image-galaxia {
+        width: 300px;
+    }
+
+    .image-galaxia-2 {
+        width: 300px;
+    }
+
+    .input-box textarea {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+

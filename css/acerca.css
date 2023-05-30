@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body  {
+    width: 100%;
+
+}
+
+#particles-js {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    justify-content: center;
+    background-image: url(../assest/universo/fondo-acerca.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.contenedor-menu {
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    top: 0;
+    right: 0;
+    clip-path: circle(100px at 100% 0);
+    transition: .7s ease all;
+    cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.active {
+    clip-path: circle(500px at 100% 0);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.39539565826330536) 0%, rgba(0,0,0,0.4374124649859944) 29%, rgba(32,38,204,0.3085609243697479) 52%, rgba(49,74,209,0.3169642857142857) 70%, rgba(23,137,173,0.3897934173669467) 91%);
+    backdrop-filter: blur(20px);
+}
+
+.elementos-navegacion {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.elementos-navegacion img {
+    position: fixed;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 40px;
+    right: 0;
+    transition: .3s ease;
+}
+
+.inactive {
+    display: none;
+}
+
+.elementos-navegacion ul {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.elementos-navegacion li {
+    list-style: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.elementos-navegacion li a {
+    text-decoration: none;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: .2s ease all;
+}
+
+.elementos-navegacion li a:hover {
+    background-color: black;
+}
+
+
+
+.main-container__perfil {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr;
+    align-self: center;
+    gap: 30px;
+}
+
+.main-container__perfil-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container__perfil-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.main-container__perfil-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: white;
+
+}
+
+.main-container__perfil-information h1 {
+    margin-bottom: 50px;
+    font-size: 6rem;
+    width: 90%;
+    border-bottom: 1px solid white;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-container__perfil-information p {
+    font-size: 2.5rem;
+    padding-right: 100px;
+    font-family: 'Rowdies', cursive;
+}
+
+.main-container__perfil-cv {
+    display: flex;
+    color: white;
+    margin-top: 40px;
+}
+
+
+.main-container__perfil-cv a {
+    font-size: 2rem;
+    font-family: 'Rowdies', cursive;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: .2s ease;
+}
+
+.main-container__perfil-cv:hover  {
+    animation-name: movemend;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes movemend {
+    0% {
+        transform: scale(1);
+    }
+
+    5% {
+        transform: scale(1.2);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+}
+
+
+.main-container__perfil-cv img {
+    width: 20px;
+    margin-left: 10px;
+}
+
+.start-1 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    top: 200px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+.start-2 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    top: 50px;
+    left: 200px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+.start-3 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    bottom: 40px;
+    left: 200px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+.start-4 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    bottom: 60px;
+    right: 200px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+.start-5 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    top: 60px;
+    right: 200px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+.start-6 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    top: 80px;
+    right: 400px;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+.start-7 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    bottom: 100px;
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+.start-8 {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50px;
+    bottom: 300px;
+    right: 90px;
+
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    opacity: 0;
+    animation-name: shine;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 2;
+    }
+    10% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1300px) {
+    .main-container__perfil-image {
+        padding: 20px;
+    }
+}
+
+
+
+@media (max-width: 860px) {
+    .main-container__perfil {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .main-container__perfil-image {
+        padding: 0;
+    }
+
+    .main-container__perfil-image img {
+        width: 300px;
+    }
+
+    .main-container__perfil-information {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-container__perfil-information h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .main-container__perfil-information p {
+        font-size: 1.5rem;
+        text-align: start;
+        padding: 10px;
+    }
+
+    .main-container__perfil-cv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .elementos-navegacion li a{
+        font-size: 2.5rem;
+    }
+
+    .start-1 {
+        display: none;
+    }
+
+    .start-2 {
+        display: none;
+    }
+
+    .start-5 {
+        display: none;
+    }
+
+    .start-6 {
+        display: none;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .main-container__perfil-image img {
+        width: 200px;
+    }
+
+    .elementos-navegacion li a{
+        font-size: 2rem;
+    } 
+
+    .contenedor-menu {
+        height: 65vh;
+        width: 100%;
+    }
+}

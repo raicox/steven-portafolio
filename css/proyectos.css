@@ -1,0 +1,611 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body  {
+    width: 100%;
+    background: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+
+.main-container-menu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.contenedor-menu {
+    
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    top: 0;
+    right: 0;
+    clip-path: circle(100px at 100% 0);
+    transition: .7s ease all;
+    cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.active {
+    clip-path: circle(500px at 100% 0);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.39539565826330536) 0%, rgba(0,0,0,0.4374124649859944) 29%, rgba(32,204,124,0.3085609243697479) 52%, rgba(49,209,137,0.3169642857142857) 70%, rgba(23,173,116,0.3897934173669467) 91%);
+    backdrop-filter: blur(20px);
+}
+
+.elementos-navegacion {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+.elementos-navegacion img {
+    position: fixed;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 40px;
+    right: 0;
+    transition: .3s ease;
+}
+
+.inactive {
+    display: none;
+}
+
+.elementos-navegacion ul {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.elementos-navegacion li {
+    list-style: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.elementos-navegacion li a {
+    text-decoration: none;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: .2s ease all;
+}
+
+.elementos-navegacion li a:hover {
+    background-color: black;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assest/universo/fondo-proyectos.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.main-title-h1 {
+    border: 3px solid white;
+    animation: desplazamientos 1.5s ease;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+@keyframes desplazamientos {
+    0% {
+        transform: translateY(-1000px);
+    }
+
+    50% {
+        transform: translateY(300px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.main-title-h1:hover {
+    background: rgb(255, 255, 255);
+}
+
+.main-title-h1:hover h1 {
+    color: black;
+}
+
+.main-title-h1:active {
+    transform: scale(0.6);
+}
+
+
+.main-title h1 {
+    font-size: 5rem;
+    color: white;
+    width: 400px;
+    text-align: center;
+    font-family: 'Bruno Ace SC', cursive;
+    cursor: pointer;
+}
+
+.main-projects-one {
+    background-image: url(../assest/universo/fondo-proyectos.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.main-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    animation: desplazamiento 1s ease;
+}
+
+@keyframes desplazamiento {
+    from {
+        transform: translateY(1000px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.main-projects__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(1fr));
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100vh;
+    
+}
+
+.main-projects__container-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .6s ease all;
+    border-radius: 30px;
+}
+
+.main-projects__container-1:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgb(255, 255, 255) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgb(255, 255, 255) 0px -3px 5px;
+}
+
+.main-projects__container-1 h2 {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: -10px;
+    background: rgb(202, 106, 16);
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: .6s ease all;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-projects__container-1:hover h2 {
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgb(255, 255, 255) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgb(255, 255, 255) 0px -3px 5px;
+}
+
+.main-projects__container-1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-projects__container-1 p {
+    font-size: 1.5rem;
+    width: 150px;
+    color: white;
+    position: absolute;
+    bottom: -10px;
+    background: rgb(202, 106, 16);
+    border: 1px solid white;
+    border-radius: 15px;
+    text-align: center;
+    transition: .6s ease all;
+    font-family: 'Rowdies', cursive;
+}
+
+.main-projects__container-1:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgb(255, 255, 255) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgb(255, 255, 255) 0px -3px 5px;
+}
+
+.main-projects__container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .6s ease all;
+    border-radius: 30px;
+}
+
+.main-projects__container-2:hover {
+    box-shadow: rgba(216, 71, 209, 0.25) 0px 54px 55px, rgba(226, 88, 215, 0.12) 0px -12px 30px, rgb(209, 86, 172) 0px 4px 6px, rgba(215, 94, 219, 0.17) 0px 12px 13px, rgb(235, 67, 184) 0px -3px 5px;
+}
+
+.main-projects__container-2 h2 {
+    font-size: 2rem;
+    color: rgb(233, 35, 216);
+    position: absolute;
+    top: -15px;
+    background: #d2f1ff;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: .6s ease all;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-projects__container-2:hover h2 {
+    box-shadow: rgba(198, 19, 221, 0.25) 0px 54px 55px, rgba(221, 19, 211, 0.12) 0px -12px 30px, rgb(248, 12, 228) 0px 4px 6px, rgba(216, 18, 223, 0.17) 0px 12px 13px, rgb(230, 13, 219) 0px -3px 5px;
+}
+
+.main-projects__container-2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-projects__container-2 p {
+    font-size: 1.5rem;
+    width: 150px;
+    color: rgb(233, 35, 216);
+    position: absolute;
+    bottom: -15px;
+    background: #d2f1ff;
+    border: 1px solid white;
+    border-radius: 15px;
+    text-align: center;
+    transition: .6s ease all;
+    font-family: 'Rowdies', cursive;
+}
+
+.main-projects__container-2:hover p {
+    box-shadow: rgba(212, 18, 230, 0.25) 0px 54px 55px, rgba(219, 14, 219, 0.12) 0px -12px 30px, rgb(238, 6, 226) 0px 4px 6px, rgba(218, 19, 218, 0.17) 0px 12px 13px, rgb(235, 26, 217) 0px -3px 5px;
+}
+
+.main-projects__container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .6s ease all;
+    border-radius: 30px;
+}
+
+.main-projects__container-3:hover {
+    box-shadow: rgba(71, 216, 95, 0.25) 0px 54px 55px, rgba(88, 226, 111, 0.12) 0px -12px 30px, rgb(111, 209, 86) 0px 4px 6px, rgba(94, 219, 94, 0.17) 0px 12px 13px, rgb(67, 235, 109) 0px -3px 5px;
+}
+
+.main-projects__container-3 h2 {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: -10px;
+    background: rgb(13, 197, 44);
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: .6s ease all;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-projects__container-3:hover h2 {
+    box-shadow: rgba(37, 228, 19, 0.25) 0px 54px 55px, rgba(6, 221, 52, 0.12) 0px -12px 30px, rgb(20, 212, 14) 0px 4px 6px, rgba(13, 230, 49, 0.17) 0px 12px 13px, rgb(9, 226, 81) 0px -3px 5px;
+}
+
+.main-projects__container-3 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-projects__container-3 p {
+    font-size: 1.5rem;
+    color: white;
+    position: absolute;
+    width: 150px;
+    bottom: -10px;
+    background: rgb(13, 197, 44);
+    border: 1px solid white;
+    border-radius: 15px;
+    transition: .6s ease all;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+}
+
+.main-projects__container-3:hover p {
+    box-shadow: rgba(15, 197, 69, 0.25) 0px 54px 55px, rgba(14, 206, 55, 0.12) 0px -12px 30px, rgb(17, 221, 28) 0px 4px 6px, rgba(34, 219, 10, 0.17) 0px 12px 13px, rgb(13, 221, 30) 0px -3px 5px;
+}
+
+.main-projects__container-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .6s ease all;
+    border-radius: 30px;
+}
+
+
+.main-projects__container-4:hover {
+    box-shadow: rgba(71, 110, 216, 0.25) 0px 54px 55px, rgba(10, 63, 238, 0.12) 0px -12px 30px, rgb(6, 10, 231) 0px 4px 6px, rgba(12, 15, 211, 0.17) 0px 12px 13px, rgb(78, 67, 235) 0px -3px 5px;
+} 
+
+.main-projects__container-4 h2 {
+    font-size: 2rem;
+    color: rgb(43, 22, 230);
+    position: absolute;
+    top: -10px;
+    background: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: .6s ease all;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-projects__container-4:hover h2 {
+    box-shadow: rgba(20, 24, 223, 0.25) 0px 54px 55px, rgba(11, 25, 216, 0.12) 0px -12px 30px, rgb(31, 9, 224) 0px 4px 6px, rgba(23, 9, 211, 0.17) 0px 12px 13px, rgb(24, 10, 216) 0px -3px 5px;
+}
+
+.main-projects__container-4 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-projects__container-4 p {
+    font-size: 1.5rem;
+    color: rgb(43, 22, 230);
+    position: absolute;
+    width: 150px;
+    bottom: -10px;
+    background: rgb(255, 255, 255);
+    border: 1px solid white;
+    border-radius: 15px;
+    transition: .6s ease all;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+}
+
+.main-projects__container-4:hover p {
+    box-shadow: rgba(16, 20, 236, 0.25) 0px 54px 55px, rgba(9, 13, 228, 0.12) 0px -12px 30px, rgb(29, 8, 223) 0px 4px 6px, rgba(17, 14, 226, 0.17) 0px 12px 13px, rgb(33, 10, 238) 0px -3px 5px;
+}
+
+.main-projects__container-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .6s ease all;
+    border-radius: 30px;
+}
+
+.main-projects__container-5:hover {
+    box-shadow: rgba(11, 141, 35, 0.25) 0px 54px 55px, rgba(5, 121, 5, 0.12) 0px -12px 30px, rgb(10, 150, 22) 0px 4px 6px, rgba(6, 180, 58, 0.17) 0px 12px 13px, rgb(9, 141, 49) 0px -3px 5px;
+}
+
+.main-projects__container-5 h2 {
+    font-size: 2rem;
+    color: rgb(252, 252, 252);
+    position: absolute;
+    top: -10px;
+    background: rgb(17, 117, 39);
+    border: 1px solid rgb(17, 117, 39);
+    border-radius: 5px;
+    transition: .6s ease all;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-projects__container-5:hover h2 {
+    box-shadow: rgba(7, 128, 23, 0.25) 0px 54px 55px, rgba(16, 131, 6, 0.12) 0px -12px 30px, rgb(6, 141, 13) 0px 4px 6px, rgba(8, 114, 8, 0.17) 0px 12px 13px, rgb(6, 121, 22) 0px -3px 5px;
+}
+
+.main-projects__container-5 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-projects__container-5 p {
+    font-size: 1.5rem;
+    color: rgb(252, 252, 252);
+    position: absolute;
+    width: 150px;
+    bottom: -10px;
+    background: rgb(17, 117, 39);
+    border: 1px solid rgb(17, 117, 39);
+    border-radius: 15px;
+    transition: .6s ease all;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+    
+}
+
+.main-projects__container-5:hover p {
+    box-shadow: rgba(20, 126, 6, 0.25) 0px 54px 55px, rgba(18, 155, 29, 0.12) 0px -12px 30px, rgb(22, 131, 12) 0px 4px 6px, rgba(9, 122, 19, 0.17) 0px 12px 13px, rgb(13, 110, 38) 0px -3px 5px;
+}
+
+.main-projects__container-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: .6s ease all;
+    border-radius: 30px;
+}
+
+.main-projects__container-6:hover {
+    box-shadow: rgba(255, 196, 0, 0.25) 0px 54px 55px, rgba(255, 174, 0, 0.12) 0px -12px 30px, rgb(255, 145, 0) 0px 4px 6px, rgba(255, 174, 0, 0.17) 0px 12px 13px, rgb(255, 153, 0) 0px -3px 5px;
+}
+
+.main-projects__container-6 h2 {
+    font-size: 2rem;
+    color: rgb(255, 153, 0);
+    position: absolute;
+    top: -10px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: .6s ease all;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-projects__container-6:hover h2 {
+    box-shadow: rgba(218, 144, 8, 0.25) 0px 54px 55px, rgba(218, 133, 6, 0.12) 0px -12px 30px, rgb(224, 112, 7) 0px 4px 6px, rgba(214, 150, 11, 0.17) 0px 12px 13px, rgb(204, 127, 12) 0px -3px 5px;
+}
+
+.main-projects__container-6 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-projects__container-6 p {
+    font-size: 1.5rem;
+    color: rgb(255, 153, 0);
+    position: absolute;
+    width: 150px;
+    bottom: -10px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    transition: .6s ease all;
+    font-family: 'Rowdies', cursive;
+    text-align: center;
+}
+
+.main-projects__container-6:hover p {
+    box-shadow: rgba(216, 151, 10, 0.25) 0px 54px 55px, rgba(219, 138, 15, 0.12) 0px -12px 30px, rgb(202, 114, 14) 0px 4px 6px, rgba(206, 108, 17, 0.17) 0px 12px 13px, rgb(211, 148, 12) 0px -3px 5px;
+}
+
+.main-projects__container-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.main-projects__container-button button {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background: rgb(46, 42, 42);
+    color: white;
+    border: 2pz solid black;
+    font-size: 1.5rem;
+    font-family: 'Bruno Ace SC', cursive;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+
+
+.main-projects__container-button button:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.main-projects__container-button button:active {
+    transform: scale(0.9);
+}
+
+
+
+.active-project {
+    display: flex;
+}  
+
+
+
+ .desactivate-project {
+    display: none;
+ }
+
+
+ @media (max-width: 950px)  {
+    body {
+        overflow-y: scroll;
+    }
+    .main-projects__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 30px;
+    }
+
+    .main-projects__container h2 {
+        font-size: 1.5rem;
+        text-align: center;
+
+    }
+
+    .main-projects__container p {
+        font-size: 1.5rem;
+        width: auto;
+    }
+ }
+
+ @media (max-width: 765px) {
+    .main-projects__container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+ }
+ 
+
+ @media (max-width: 420px) {
+    .main-title h1 {
+        font-size: 4rem;
+        width: 300px;
+    }
+
+    .elementos-navegacion li a {
+        font-size: 2rem;
+    }
+
+    .contenedor-menu {
+        height: 65vh;
+        width: 100%;
+    }
+
+ }
+
+ 
+ @media (max-width: 340px)  {
+    .main-projects__container {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 20px;
+    }
+    .main-projects__container h2 {
+        top: -20px;
+    }
+
+
+ }

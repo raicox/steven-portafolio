@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body  {
+    width: 100%;
+
+}
+
+#particles-js {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.contenedor-menu {
+    color: white;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-align: center;
+    top: 0;
+    right: 0;
+    clip-path: circle(100px at 100% 0);
+    transition: .7s ease all;
+    cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.active {
+    clip-path: circle(500px at 100% 0);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.39539565826330536) 0%, rgba(0,0,0,0.4374124649859944) 29%, rgba(32,204,185,0.3085609243697479) 52%, rgba(49,209,202,0.3169642857142857) 70%, rgba(23,137,173,0.3897934173669467) 91%);
+    backdrop-filter: blur(20px);
+}
+
+.elementos-navegacion {
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+
+.elementos-navegacion img {
+    position: fixed;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 40px;
+    right: 0;
+    transition: .3s ease;
+}
+
+.inactive {
+    display: none;
+}
+
+.elementos-navegacion ul {
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+.elementos-navegacion li {
+    list-style: none;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.elementos-navegacion li a {
+    text-decoration: none;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: .2s ease all;
+}
+
+.elementos-navegacion li a:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+
+.btn-abrir-emnu {
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.main-presentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.main-presentation__info {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 300px;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    place-self: center;
+    position: absolute;
+}
+
+.main-presentation__info h2 {
+    font-size: 7rem;
+    cursor: default;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+.main-presentation__info img {
+    width: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 270px;
+    animation-name: layer;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes layer {
+    0% {
+        bottom: 0;
+    }
+
+    25% {
+        bottom: -80px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.main-information {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-information {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.main-information__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main-information__description h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Bruno Ace SC', cursive;
+    padding: 20px;
+}
+
+.main-information__description p {
+    font-size: 2rem;
+    font-family: 'Bruno Ace SC', cursive;
+    padding: 20px;
+}
+
+.main-information__description-icons { 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+.main-information__description-icons img {
+    width: 60px;
+    margin: 20px 20px;
+    transition: 3s;
+}
+
+.main-information__description-icons-container {
+    font-family: 'Rowdies', cursive;
+}
+
+.main-information__description-icons-linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    background: #007bb9b6;
+    clip-path: polygon(0 0, 52% 0, 30% 100%, 0 100%);
+    transition: .6s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.main-information__description-icons-linkedin:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.main-information__description-icons-container a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.main-information__description-icons-instagram {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    clip-path: polygon(0 0, 52% 0, 30% 100%, 0 100%);
+    transition: .6s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.main-information__description-icons-instagram:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.main-information__description-icons-git {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    color: black;
+    background: #ffffff; 
+    clip-path: polygon(100% 0, 68% 0, 51% 100%, 100% 100%);
+    transition: .6s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.main-information__description-icons-git:hover {
+    clip-path: polygon(100% 1%, 0 0, 0 100%, 100% 100%);
+}
+
+.main-information__description-icons-twitter {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    color: black;
+    background: #50abf1; 
+    color: white;
+    clip-path: polygon(100% 0, 68% 0, 51% 100%, 100% 100%);
+    transition: .6s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.main-information__description-icons-twitter:hover {
+    clip-path: polygon(100% 1%, 0 0, 0 100%, 100% 100%);
+}
+
+
+.main-information__photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-information__photo img {
+    width: 80%;
+    min-width: 80%;
+    align-self: center;
+    justify-self: center;
+}
+
+.main-logos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+    background-image: url(../assest/universo/fondo-index.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.main-logos h2 {
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    font-family: 'Bruno Ace SC', cursive;
+}
+
+
+.main-logos__image img {
+    width: 100px;
+    height: 100px;
+    margin: 0 30px;
+}
+
+
+@media (max-width: 840px) {
+    .main-logos {
+        height: 60vh;
+    }
+
+    .main-logos__image img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+
+
+@media (max-width: 660px) {
+
+    .main-presentation__info h1 {
+        font-size: 3rem;
+    }
+    .main-presentation__info h2 {
+        font-size: 4rem;
+    }
+
+    .main-presentation__info img {
+        left: 130px;
+    }
+
+    .main-information {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 100vh;
+    }
+
+    .main-information__photo {
+        display: none;
+    }
+
+    .main-logos {
+        display: flex;
+        justify-content: end;
+        height: 80vh;
+        background-image: none;
+        background-color: black;
+    }
+
+   
+    .main-logos img {
+        display: grid;
+        grid-template-columns: 50px ;
+        margin: 50px 0;
+    }
+
+    .main-logos__image img {
+        width: 60px;
+        height: 50px;
+    }
+
+    .main-logos h2 {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .main-information__description-icons {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        padding: 0;
+        height: 60vh;
+    }
+
+    .elementos-navegacion li a{
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 425px) {
+
+    .contenedor-menu {
+        height: 60vh;
+        width: 100%;
+    }
+    .main-logos {
+        height: 100vh;
+    }
+
+    .main-presentation__info h2 {
+        font-size: 3rem;
+    }
+
+    .main-presentation__info img {
+        left: 90px;
+    }
+
+    .main-information__description h2 {
+        padding: 10px;
+    }
+
+    .main-information__description p {
+        padding: 10px;
+    }
+
+    .main-logos__image img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .active {
+        clip-path: circle(100% at 100% 0);
+    }
+
+    .elementos-navegacion li a{
+        font-size: 2rem;
+    }
+}
